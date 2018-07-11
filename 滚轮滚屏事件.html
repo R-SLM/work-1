@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <style type="text/css">  
+        html, body{  
+            height: 100%;  
+            margin: 0;  
+            padding: 0;  
+        }  
+        *{margin:0; padding:0;}  
+        #map {  
+            height: 100%;  
+        }  
+    </style>  
+</head>  
+<body>  
+<p><label for="wheelDelta"> 浏览器类型:</label>(IE/Opera)<input type="text" id="wheelDelta"/></p>  
+<p><label for="detail"> 滚动值:</label><input type="text" id="detail"/></p>  
+<script type="text/javascript">  
+    var scrollFunc = function (e) {  
+        e = e || window.event;  
+  
+        var t1 = document.getElementById("wheelDelta");  
+        var t2 = document.getElementById("detail");  
+        if (e.wheelDelta) {//IE/Opera/Chrome  
+            t1.value = "IE、Opera、Safari、Chrome";  
+            t2.value = e.wheelDelta;  
+        } else if (e.detail) {//Firefox  
+            t1.value = "Firefox";  
+            t2.value = e.detail;  
+        }  
+        //ScrollText(direct);  
+    }  
+    /*注册事件*/  
+    if (document.addEventListener) {  
+        document.addEventListener('DOMMouseScroll', scrollFunc, false);  
+    }//W3C  
+    window.onmousewheel = document.onmousewheel = scrollFunc;//IE/Opera/Chrome/Safari  
+</script>  
+</body>  
+</html>

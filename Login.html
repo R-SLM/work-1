@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>login</title>
+	<style type="text/css">
+html {
+			height: 100%;
+		}
+		body {
+			position: relative;
+			background: url(./images/login.jpg);
+			background-repeat: no-repeat;
+			background-size:100%;
+			height: 100%;
+		}
+		p {
+			text-align: center;
+			font-size: 28px;
+			color:#74b9ff;
+			margin: 25px 0 0 0;
+
+		}
+		ul li{
+			list-style: none;
+			display: block;
+		}
+		a{
+			text-decoration: none;
+		}
+		#login {
+			width: 380px;
+			height: 420px;
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-190px,-210px);
+			border-radius: 5px;
+			background: hsla(0, 0%, 100%, .95);
+			box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+		}
+		.form-wrap{
+			padding:15px;
+		}
+		.content{
+			width:100%;
+			margin:0;
+			padding: 0;
+		}
+
+		.content li{
+			margin-bottom: 25px;
+		}
+		.text-type{
+			margin:20px;
+		}
+		.text-type input{
+			width:96%;
+			height: 35px;
+			line-height: 35px;
+			padding-left: 10px;
+			font-size: 16px;
+			color:#7d7d7d;
+		}
+		.code-type{
+			margin:20px;
+		}
+		.code-type a{
+			width:43%;
+			height: 41px;
+			line-height: 41px;
+			display: inline-block;
+			padding-left: 7px; 
+		}
+		a img{
+			vertical-align:middle;
+			height: 38px;
+			line-height:38px;
+			width:141px;
+		}
+		.code-type input{
+			width:46%;
+			height: 40px;
+			line-height: 49px;
+			padding-left: 10px;
+			font-size: 16px;
+			color:#7d7d7d;
+			vertical-align: middle;
+		}
+		.button{
+			margin:20px;
+		}
+		.button-type {
+			width: 46%;
+			height: 40px;
+			color:#fff;
+			background: #74b9ff;
+			border:none;
+			font-size: 18px;
+			cursor: pointer;
+		}
+		.left{float:left;}
+		.right{margin-left:15px}
+
+	</style>
+</head>
+
+<body>
+	<div id="login">
+		<div class="header">
+			<p>旅游咨讯网站</p>
+		</div>
+		<div class="form-wrap">
+			<form action="jspmlyzxwzdzkf89A4?ac=adminlogin&a=a" method="post" name="form1" >
+				<ul class="content">
+					<li class="text-type">
+						<input type="text" name="username" id="username" placeholder="用户名" onfocus="this.placeholder='';" onblur="if(this.placeholder == ''){this.placeholder='用户名';}">
+					</li>
+					<li class="text-type">
+						<input type="password" name="pwd" id="pwd" placeholder="密码" onfocus="this.placeholder='';" onblur="if(this.placeholder == ''){this.placeholder='密码';}">
+					</li>
+					<li class="code-type">
+						<input type="text" name="pagerandom" id="pagerandom" placeholder="验证码" onfocus="this.placeholder='';" onblur="if(this.placeholder == ''){this.placeholder='验证码';}">
+						<a href="javascript:loadimage();">
+							<img alt="看不清请点我！" name="randImage" id="randImage" src="image.jsp">
+						</a>
+					</li>
+					<li class="button">
+						<input type="submit" name="Submit" value="登陆" class="button-type left" onClick="return check()";>
+	                    <input type="reset" name="Submit2" value="重置" class="button-type right">
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
