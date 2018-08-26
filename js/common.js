@@ -274,6 +274,11 @@ window.onload = function(){
 			return false;
 		}
 	}
+
+	try {
+	document.execCommand("BackgroundImageCache", false, true);
+	} catch(err) {}
+
 }
 
 	// function opacityChange(){

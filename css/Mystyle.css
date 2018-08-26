@@ -14,7 +14,9 @@ body { position: relative; font-size:1.4rem;}
 
 .text-center { text-align: center; }
 .content-center { margin: 0 auto; }
-.banner { background: url(../images/banner.jpg) center no-repeat fixed; background-size: cover; min-height: 42em; position: relative; }
+.banner { background: url(../images/banner.jpg) center no-repeat/* fixed*/; background-size: cover; min-height: 42em; position: relative; }
+/* 背景图fixed时,由于鼠标滚动时不断改变以固定显示，导致背景图闪烁等bug*/
+
 .logo { font-size: 3.5rem; color: rgb(57, 201, 218); font-weight: 500; }
 .logo:hover { text-decoration: none; color: rgb(57, 201, 218); }
 .my-navbar {}
