@@ -220,7 +220,14 @@ window.onload = function(){
 
 			var Mask = document.createElement("div");
 			Mask.id="mask";
+			Mask.className ="mask-opacity0";
 			document.body.appendChild(Mask);
+
+			// (位置问题)放在这里不行？？？放在后面就可以（因为动态创建元素还没有完成？？？）
+			// var divmask = document.getElementById("mask");
+			// console.log(divmask);
+			// divmask.style.opacity = '1';
+			// var time = setTimeout("opacityChange()",10);
 
 			var detial = document.createElement("div");
 			var close = document.createElement("button");
@@ -252,6 +259,14 @@ window.onload = function(){
 			var detialheigth = detial.offsetHeight;
 			detial.style.top = (clientheigth-detialheigth)/2 + "px";
 
+			//js+animation动态改变透明度。形成视差效果。（关于放置地点问题。。.）
+			var divmask = document.getElementById("mask");
+			var divdetialBox = document.getElementById("detialBox");
+			// console.log(divmask);
+			divmask.style.background = 'rgba(0,0,0,0.8)';
+			divdetialBox.style.opacity = "1";
+			divdetialBox.style.transform = "scale(1.05)";
+
 			close.onclick = mask.onclick = function(){
 				document.body.removeChild(Mask);
 				document.body.removeChild(detial);
@@ -260,3 +275,8 @@ window.onload = function(){
 		}
 	}
 }
+
+	// function opacityChange(){
+	// 	var maskChange = document.getElementById("mask");
+	// 	maskChange.addClass('mask-opacity1');
+	// }

@@ -11,24 +11,30 @@
 
 </head>
 <body>
+
 	<a class="qq-contact" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3390632648&site=qq&menu=yes">
 		<img border="0" src="images/CN_tencent_QQ.svg" alt="点击这里给我发消息" title="点击这里给我发消息"/>
 	</a>
+
 <section id="home">
-	<div class="container-fluid ">
+	<div class="container-fluid"><!-- contaiver根据bootstrap定义的宽度变化，自动调整固定大小 
+		container-fluid宽度100%相对父类居中-->
+		<!-- (反撤销操作shift+y) -->
 		<div class="row">
 			<div class="col-xs-12 banner">
 				<nav class="navbar my-navbar navbar-fixed-top">
 					<div class="container">
 					<div class="navbar-header">
-						<a href="/" class="navbar-brand logo">Metro Ui</a>
+						<a href="" class="navbar-brand logo">Metro Ui</a>
+						<!-- href="/"页面会跳转到根目录（显示整个根目录的情况列表显示。） -->
 						<button type="button" class="navbar navbar-toggle" data-toggle="collapse" data-target="#navbar">
 							<img src="images/icon.png">	
 						</button>
 					</div>
 					<div id="navbar" class="navbar-collapse collapse ">
-						<!-- href="###" 和 # 和 javascript:; 和 javascript:void(0);-->
 						<ul class="navbar-right nav-1">
+						<!-- href="###" 和 # 和 javascript:; 和 javascript:void(0);的区别-->
+						<!-- ###：空的链接，又不跳转到页面头部； #是标签内置的一个方法，代表top的作用；javascript:执行了一条空的js代码；javascript:void(0), 仅仅表示一个死链接。-->
 							<li><a href="###" class=" text-center li-hover">HOME</a></li>
 							<li><a href="###" class=" text-center">ABOUT US</a></li>
 							<li><a href="###" class=" text-center">PORTFOLIO</a></li>

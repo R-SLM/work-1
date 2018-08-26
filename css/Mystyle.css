@@ -3,8 +3,8 @@
 .qq-contact img { }
 
 /* 动态创建图片详情的样式。 */
-#mask { position: absolute; background: rgba(0, 0, 0, 0.6); left: 0; top: 0; right: 0; bottom: 0; }
-#detialBox { position: fixed; background: #F4F4F4;	/* vertical-align: middle; */ }
+#mask { position: absolute; background: rgba(0, 0, 0, 0.1); left: 0; top: 0; right: 0; bottom: 0; transition: all 0.5s;}
+#detialBox { position: fixed; background: #F4F4F4;	/* vertical-align: middle; */opacity: 0.2; transition: 0.5s;}
 .closeType { float: right; background: transparent; font-size: 35px; font-weight: 700; cursor: pointer; border: none; box-shadow: none; outline: none; }
 .detial-content { }
 .detial-content p { margin-top: 10px;	/* overflow: hidden; */	/* height:60px; */ }
